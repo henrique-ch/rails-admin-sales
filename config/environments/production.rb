@@ -16,6 +16,13 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+
+  config.i18n.enforce_available_locales = false
+  config.i18n.available_locales = ["pt-BR"]
+  config.i18n.default_locale = :'pt-BR'
+
+
+
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
@@ -97,10 +104,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Inserts middleware to perform automatic connection switching.
-  # The `database_selector` hash is used to pass options to the DatabaseSelector
-  # middleware. The `delay` is used to determine how long to wait after a write
-  # to send a subsequent read to the primary.
+
   #
   # The `database_resolver` class is used by the middleware to determine which
   # database is appropriate to use based on the time delay.
