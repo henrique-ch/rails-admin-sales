@@ -1,4 +1,4 @@
-class User &lt; ApplicationRecord
+class User < ApplicationRecord
   enum kind: [:salesman, :manager]
   enum status: [:active, :inactive]
   has_many :comissions
@@ -6,4 +6,5 @@ class User &lt; ApplicationRecord
   has_many :clients
   has_many :product_quantities
   has_many :sales
+  has_many :email
 end
